@@ -11,6 +11,8 @@ bearer authentication as well as basic auth on an express server using PostgreSQ
 ### <center> links and resources </center>
 
 # Facing problem not solved yet
+### Here is the test score passed 11 still 9 left =( 
+![](https://github.com/MasteRminD6666/bearer-auth/blob/main/test%20score.PNG?raw=true)
 
 
 ## <center> UML DIAGRAM </center>
