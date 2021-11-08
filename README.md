@@ -17,7 +17,7 @@ bearer authentication as well as basic auth on an express server using PostgreSQ
 
 ## <center> UML DIAGRAM </center>
 
-![web request response cycle diagram 001](https://github.com/MasteRminD6666/bearer-auth/blob/main/1598bearerAuthServer001.png?raw=true)
+![web request response cycle diagram 001](https://github.com/MasteRminD6666/bearer-auth/blob/main/rami_UMLServer001.png?raw=true)
 ![web request response cycle diagram 002](https://github.com/MasteRminD6666/bearer-auth/blob/main/1599bearerAuthServer001.png?raw=true)
 
 ## Overview
