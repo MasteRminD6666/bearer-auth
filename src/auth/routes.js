@@ -2,9 +2,10 @@
 require('dotenv').config();
 const express = require('express');
 const authRouter = express.Router();
+const bcrypt = require('bcrypt');
 const { users } = require('./models/index.js');
 const basicAuth = require('./middleware/basic.js')
-const bearerAuth = require('./middleware/basic.js')
+const bearerAuth = require('./middleware/bearer.js')
 
 authRouter.post('/signup', async (req, res, next) => {
 
@@ -39,8 +40,8 @@ authRouter.post('/signin', basicAuth, (req, res, next) => {
 });
 //next removed 
 authRouter.get('/users', bearerAuth, async (req, res) => {
-  const users = await Users.findAll({});
-  const list = users.map(user => user.username);
+  const allUseres = await users.findAll({});
+  const list = allUseres.map(user => user.username);
   res.status(200).json(list);
 });
 //next removed
