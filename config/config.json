@@ -1,0 +1,23 @@
+{
+    "development": {
+      "username": "mastermind",
+      "password": "password",
+      "database": "auth",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "mastermind",
+      "password": "password",
+      "database": "auth",
+      "host": "127.0.0.1",
+      "dialect": "sqlite:memory:"
+    },
+    "production": {
+      "username": "mastermind",
+      "password": "password",
+      "database": "auth",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    }
+  }
