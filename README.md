@@ -10,8 +10,8 @@ bearer authentication as well as basic auth on an express server using PostgreSQ
 
 ### <center> links and resources </center>
 
-# Facing problem not solved yet
-### Here is the Heorku deploemnt error this is the local result  =( 
+# Facing problem not solved yet with Heroku
+### Here is  the local result  =( 
 ![](https://github.com/MasteRminD6666/bearer-auth/blob/main/tested.gif?raw=true)
 
 
