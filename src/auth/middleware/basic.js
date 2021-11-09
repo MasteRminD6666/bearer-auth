@@ -19,6 +19,8 @@ module.exports = async (req, res, next) => {
   try {
     // console.log(username,pass);
     req.user = await users.authenticateBasic(username, password)
+    console.log( 'getting back to this', req.user);
+    //TODO REAChed here but dos not send it to the route
     next(); 
   } catch (e) {
     res.status(403).send('Invalid Login here');

@@ -25,12 +25,19 @@ const userSchema = (sequelize, DataTypes) => {
   // Basic AUTH: Validating strings (username, password) 
   model.authenticateBasic = async function (username, password) {
     const user = await this.findOne({ where:{username} })
-    console.log('HEREEE user info',user);
+    // console.log('HEREEE user info',user);
     console.log('HEREEE user password',user.password);
     const valid = await bcrypt.compare(password, user.password)
     console.log('HEREEE user is valid',valid);
-    if (valid) { return user; }
-    throw new Error('Invalid User');
+    // console.log('after finding the user ----------------------------------', user);
+    if (valid) { 
+      console.log('going inside if ===========================');
+      //TODO check this method 
+      //TODO  here the error
+      // let newToken = jwt.sign({ username: user.username ,jwt_key})
+      // user.token = newToken
+      return user; }
+    throw new Error('Invalid User here');
   }
 
   // Bearer AUTH: Validating a token
@@ -38,10 +45,11 @@ const userSchema = (sequelize, DataTypes) => {
     try {
       const parsedToken = jwt.verify(token,jwt_key);
       const user = await this.findOne({ where:{ username: parsedToken.username }})
+
       if (user) { return user; }
       throw new Error("User Not Found");
     } catch (e) {
-      throw new Error('catch this0', e.message)
+      throw new Error('catch this', e.message)
     }
   }
 
