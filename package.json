@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init": "sequelize db:create",
+    "dev": "NODE_ENV=development nodemon index.js",
     "start": "NODE_ENV=production node index.js",
     "init:config": "sequelize init:config",
     "db:create": "sequelize db:create",
@@ -19,9 +21,9 @@
   "license": "ISC",
   "dependencies": {
     "base-64": "^1.0.0",
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.6.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jest": "^26.6.3",
     "jsonwebtoken": "^8.5.1",

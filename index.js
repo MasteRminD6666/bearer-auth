@@ -7,7 +7,7 @@ db.sync()
   .then(() => {
 
     // Start the web server
-    require('./src/server.js').startup(process.env.PORT || 3000);
+    require('./src/server.js').startup(process.env.PORT);
   }).catch((err) => {
     console.log(err.message);
   });
